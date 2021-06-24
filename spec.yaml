@@ -1,0 +1,29 @@
+fabric:
+  cas:
+  - "ca.iti.gov.br"
+  - "ca.serpro.gov.br"
+  peers: 
+  - "peer1.iti.gov.br"
+  - "peer2.iti.gov.br"
+  - "peer1.serpro.gov.br"
+  - "peer2.serpro.gov.br"
+  orderers:
+  - "orderer1.iti.gov.br"
+  - "orderer2.iti.gov.br"
+  - "orderer3.iti.gov.br"
+  settings:
+    ca:
+      FABRIC_LOGGING_SPEC: DEBUG
+    peer:
+      FABRIC_LOGGING_SPEC: DEBUG
+    orderer:
+      FABRIC_LOGGING_SPEC: DEBUG
+  ### use go proxy when default go proxy is restricted in some of the regions.
+  ### the default goproxy
+  # goproxy: "https://proxy.golang.org,direct"
+  ### set the endpoint address to override the automatically detected IP address
+  # endpoint_address: 104.196.45.144
+  ### set the docker network name to override the automatically generated name.
+  netname: "revokechain"
+  ### set the extra optins for docker run command
+  # container_options: "--restart=always --log-opt max-size=10m --log-opt max-file=3"
