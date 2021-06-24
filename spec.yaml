@@ -1,16 +1,15 @@
 fabric:
   cas:
-  - "ca.iti.gov.br"
-  - "ca.serpro.gov.br"
+  - "ca.revokechain.iti.gov.br"
+  - "ca.revokechain.serpro.gov.br"
   peers: 
-  - "peer1.iti.gov.br"
-  - "peer2.iti.gov.br"
-  - "peer1.serpro.gov.br"
-  - "peer2.serpro.gov.br"
+  - "peer1.revokechain.iti.gov.br"
+  - "peer2.revokechain.iti.gov.br"
+  - "peer1.revokechain.serpro.gov.br"
+  - "peer2.revokechain.serpro.gov.br"
   orderers:
-  - "orderer1.iti.gov.br"
-  - "orderer2.iti.gov.br"
-  - "orderer3.iti.gov.br"
+  - "orderer1.revokechain.gov.br"
+  - "orderer2.revokechain.gov.br"
   settings:
     ca:
       FABRIC_LOGGING_SPEC: DEBUG
@@ -24,6 +23,6 @@ fabric:
   ### set the endpoint address to override the automatically detected IP address
   # endpoint_address: 104.196.45.144
   ### set the docker network name to override the automatically generated name.
-  netname: "revokechain"
+  netname: "revokechain-icpbrasil"
   ### set the extra optins for docker run command
   # container_options: "--restart=always --log-opt max-size=10m --log-opt max-file=3"
