@@ -4,11 +4,8 @@ class NatsWrapper {
   private _client?: Stan;
 
   get client () {
-    if (!this._client) {
-      throw new Error(
-        'Não é possível acessar o NATS antes de conectar o cliente'
-      )
-    }
+    if (!this._client)
+      throw new Error('OMG! Cannot access NATS before connecting')
 
     return this._client
   }
@@ -18,12 +15,12 @@ class NatsWrapper {
 
     return new Promise((resolve, reject) => {
       this.client.on('connect', () => {
-        console.log('NATS conectado.')
+        console.log('NATS connected.')
         resolve()
       })
 
       this.client.on('error', (err) => {
-        console.log('Erro ao conectar NATS.')
+        console.log('OMG! Error connecting NATS.')
         reject(err)
       })
     })

@@ -1,0 +1,45 @@
+version: '2.4'
+services: 
+    revokechain-api:
+        depends_on: 
+            - api-gateway
+        build: 
+            context: ./certificate-status-api
+            dockerfile: dockerfile
+        volumes: 
+            - app/node_modules
+            - ./certificate-status-api:/app
+        ports:
+            - 3000:3000
+        environment: 
+            - NATS_CLIENT_ID=${NATS_CLIENT_ID}
+            - NATS_CLUSTER_ID=${NATS_CLUSTER_ID}
+            - NATS_URL=${NATS_URL}
+            - NODE_ENV=${NODE_ENV}
+            - NODE_PORT=${NODE_PORT}
+            - URL_GATEWAY=${URL_GATEWAY}
+            - CHANNEL_NAME=${CHANNEL_NAME}
+            - CHAINCODE_NAME=${CHAINCODE_NAME}
+            - MSP_NAME=${MSP_NAME}
+            - USER_ID=${USER_ID}
+            - WALLET_PATH=${WALLET_PATH}
+            - CONNECTION_PATH=${CONNECTION_PATH}
+
+    api-gateway:
+        depends_on: 
+            - nats
+        build: 
+            context: ./krakend-gateway
+            dockerfile: dockerfile
+        volumes: 
+            - ./krakend-gateway/config:/opt/config
+        ports:
+            - 80:8080
+    
+    nats:
+        build: 
+            context: ./nats
+            dockerfile: dockerfile
+        ports:
+            - '4222:4222'
+            - '8222:8222'
