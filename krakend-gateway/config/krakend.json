@@ -54,6 +54,7 @@
     {
       "endpoint": "/api/revokechain/certificates",
       "method": "POST",
+      "timeout": "300s",
       "headers_to_pass": [
         "Authorization",
         "Content-Type"
@@ -70,15 +71,16 @@
       ]
     },
     {
-      "endpoint": "/api/revokechain/certificates",
+      "endpoint": "/api/revokechain/status/{ca}/certificates/{serial}",
       "method": "GET",
+      "timeout": "300s",
       "headers_to_pass": [
         "Authorization",
         "Content-Type"
       ],
       "backend": [
         {
-          "url_pattern": "/api/revokechain/certificates",
+          "url_pattern": "/api/revokechain/status/{ca}/certificates/{serial}",
           "host": [
             "http://revokechain-api:3000"
           ],

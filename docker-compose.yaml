@@ -4,17 +4,13 @@ services:
         depends_on: 
             - api-gateway
         build: 
-            context: ./certificate-status-api
-            dockerfile: dockerfile
+            context: ./rc-app/node/revokechain-api
+            dockerfile: Dockerfile
         volumes: 
-            - app/node_modules
-            - ./certificate-status-api:/app
+            - ./rc-app/node/revokechain-api:/app
         ports:
             - 3000:3000
         environment: 
-            - NATS_CLIENT_ID=${NATS_CLIENT_ID}
-            - NATS_CLUSTER_ID=${NATS_CLUSTER_ID}
-            - NATS_URL=${NATS_URL}
             - NODE_ENV=${NODE_ENV}
             - NODE_PORT=${NODE_PORT}
             - URL_GATEWAY=${URL_GATEWAY}
@@ -26,20 +22,10 @@ services:
             - CONNECTION_PATH=${CONNECTION_PATH}
 
     api-gateway:
-        depends_on: 
-            - nats
         build: 
             context: ./krakend-gateway
-            dockerfile: dockerfile
+            dockerfile: Dockerfile
         volumes: 
             - ./krakend-gateway/config:/opt/config
         ports:
             - 80:8080
-    
-    nats:
-        build: 
-            context: ./nats
-            dockerfile: dockerfile
-        ports:
-            - '4222:4222'
-            - '8222:8222'

@@ -7,7 +7,7 @@ router.get('/api/revokechain/hello', (req: Request, res: Response) => {
   res.status(200).send([{ "message": "Hello, from revokechain-api!!!" }])
 })
 
-router.get('/api/revokechain/:ca/certificates/:serial', async (req: Request, res: Response) => {
+router.get('/api/revokechain/status/:ca/certificates/:serial', async (req: Request, res: Response) => {
   const key = `${req.params.ca}:${req.params.serial}`
   const query = new QueryCertificate()
   const result = await query.execute(key)

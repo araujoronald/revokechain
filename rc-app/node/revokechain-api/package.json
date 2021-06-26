@@ -13,6 +13,7 @@
   "author": "Ronald Carvalho Ribeiro de Araujo",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.6.0",
@@ -20,6 +21,7 @@
     "fabric-ca-client": "^2.2.4",
     "fabric-network": "^2.2.4",
     "node-nats-streaming": "^0.3.2",
+    "pkcs11js": "^1.2.5",
     "swagger-jsdoc": "^6.0.0",
     "swagger-ui-express": "^4.1.6"
   },
