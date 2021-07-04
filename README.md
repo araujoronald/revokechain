@@ -9,17 +9,41 @@ O projeto está dividido da seguinte forma:
 
 - [API Gateway](/krakend-gateway)
 - [Aplicação](/rc-app/node/revokechain-api)
-- [Smartcontract](/rc-chaincode)
+- [Smartcontract](/rc-chaincode/certificate-status/go)
 - [Docs](/docs)
 
-## API-Gateway
-Revokechain utiliza o software KrakenD como o seu API gateway. O arquivo de configuração expõe os endpoints necessários para a inclusão e consulta de um certificado revogado. Além disso existe um endpoint para healthcheck da aplicação.
+#### instalando o Minifabric
+```bash
+$ curl -o minifab -sL https://tinyurl.com/yxa2q6yr && chmod +x minifab
+```
 
-## Aplicação
-Aplicação em NodeJS para a comunicação com o smartcontract (chaincode) da rede blockchain.
+#### iniciando o Minifabric
+```bash
+$ ./minifab up
+```
 
-## Smartcontract
-Contrato inteligente.
+#### parando o Minifabric
+```bash
+$ ./minifab down
+```
 
-## Docs
-diagramas da solução.
+#### retomando o Minifabric
+```bash
+$ ./minifab netup
+```
+
+#### instalando o smartcontract
+```bash
+$ ./minifab install -n certificate-status -v 1.0 -o revokechain.serpro.gov.br 
+```
+
+#### confirmando o smartcontract
+```bash
+$ ./minifab approve,commit,initialize,discover
+```
+
+#### invocando um método do smartcontract. Ex: GetAllAssets
+```bash
+$ ./minifab invoke -n certificate-status -p '"GetAllAssets"'
+```
+
