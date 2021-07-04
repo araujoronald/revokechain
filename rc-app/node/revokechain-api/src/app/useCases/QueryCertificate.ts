@@ -1,6 +1,6 @@
 import { Gateway, Wallets } from "fabric-network";
-import * as path from "path"
 import fs from 'fs';
+import { CertificateEntry } from "../valueObjects/CertificateEntry";
 
 export class QueryCertificate {
   channelName: string
@@ -19,21 +19,17 @@ export class QueryCertificate {
     this.userId = process.env.USER_ID
   }
 
-  async execute(key: string): Promise<boolean> {
+  async execute(key: string): Promise<CertificateEntry> {
 
       // load the network configuration
-      //const ccpPath = path.resolve(__dirname, '.', 'connection.json');
-      // const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
       const ccp = JSON.parse(fs.readFileSync(this.connectionPath, 'utf8'));
       console.log(`Connection path: ${ccp}`);
-      
 
       // Create a new file system based wallet for managing identities.
       const wallet = await Wallets.newFileSystemWallet(this.walletPath);
       console.log(`Wallet path: ${this.walletPath}`);
       const list = await wallet.list()
       console.log(`Wallet: ${list}`);
-      
 
       // Check to see if we've already enrolled the admin user.
       const identity = await wallet.get(this.userId);
@@ -57,12 +53,13 @@ export class QueryCertificate {
       console.log(`Contract: ${contract.chaincodeId}`);
 
       // Submit the specified transaction
-      const result = await (await contract.submitTransaction('GetAllAssets')).toString();
+      const resultStr = (await contract.submitTransaction('ReadCertificateEntry')).toString();
+      const entry: CertificateEntry = JSON.parse(resultStr)
       console.log('Transaction has been submitted');
 
       // Disconnect from the gateway.
       gateway.disconnect();
       
-      return result == 'true'
+      return entry
   }
 }

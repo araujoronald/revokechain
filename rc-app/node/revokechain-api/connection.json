@@ -53,7 +53,7 @@
   },
   "orderers": {
     "orderer1.revokechain.gov.br": {
-      "url": "grpcs://orderer1.revokechain.gov.br:7050",
+      "url": "grpcs://localhost:7050",
       "grpcOptions": {
         "ssl-target-name-override": "orderer1.revokechain.gov.br"
       },
@@ -62,7 +62,7 @@
       }
     },
     "orderer2.revokechain.gov.br": {
-      "url": "grpcs://orderer2.revokechain.gov.br:7050",
+      "url": "grpcs://localhost:7050",
       "grpcOptions": {
         "ssl-target-name-override": "orderer2.revokechain.gov.br"
       },
@@ -73,7 +73,7 @@
   },
   "peers": {
     "peer1.revokechain.iti.gov.br": {
-      "url": "grpcs://peer1.revokechain.iti.gov.br:7051",
+      "url": "grpcs://localhost:7051",
       "grpcOptions": {
         "ssl-target-name-override": "peer1.revokechain.iti.gov.br"
       },
@@ -82,7 +82,7 @@
       }
     },
     "peer2.revokechain.iti.gov.br": {
-      "url": "grpcs://peer2.revokechain.iti.gov.br:7051",
+      "url": "grpcs://localhost:7051",
       "grpcOptions": {
         "ssl-target-name-override": "peer2.revokechain.iti.gov.br"
       },
@@ -91,7 +91,7 @@
       }
     },
     "peer1.revokechain.serpro.gov.br": {
-      "url": "grpcs://peer1.revokechain.serpro.gov.br:7051",
+      "url": "grpcs://localhost:7051",
       "grpcOptions": {
         "ssl-target-name-override": "peer1.revokechain.serpro.gov.br"
       },
@@ -100,7 +100,7 @@
       }
     },
     "peer2.revokechain.serpro.gov.br": {
-      "url": "grpcs://peer2.revokechain.serpro.gov.br:7051",
+      "url": "grpcs://localhost:7051",
       "grpcOptions": {
         "ssl-target-name-override": "peer2.revokechain.serpro.gov.br"
       },
@@ -111,7 +111,7 @@
   },
   "certificateAuthorities": {
     "ca.revokechain.iti.gov.br": {
-      "url": "https://ca.revokechain.iti.gov.br:7054",
+      "url": "https://localhost:7054",
       "tlsCACerts": {
         "pem": "-----BEGIN CERTIFICATE-----\nMIICzTCCAnKgAwIBAgIUfLtSQkTQjLn5g7mmSOmePkPlGfgwCgYIKoZIzj0EAwIw\nfTELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMR8wHQYDVQQKDBZyZXZva2VjaGFpbi5pdGkuZ292LmJyMSIwIAYD\nVQQDDBljYS5yZXZva2VjaGFpbi5pdGkuZ292LmJyMB4XDTIxMDYyNDE5MzAwM1oX\nDTMxMDYyMjE5MzAwM1owfTELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENh\ncm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMR8wHQYDVQQKDBZyZXZva2VjaGFpbi5p\ndGkuZ292LmJyMSIwIAYDVQQDDBljYS5yZXZva2VjaGFpbi5pdGkuZ292LmJyMFkw\nEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/7eOKwQbWsWAda09ddhxVaSi/5vWZf/A\niDtiduqSCCSfE2hIVlrxoNFucAdL5Kxx7OhdgfEV1gE1oOrFnx6t1aOBzzCBzDAd\nBgNVHQ4EFgQUcsXNt08ICNW/+Uf1SzEEYRA/T8YwHwYDVR0jBBgwFoAUcsXNt08I\nCNW/+Uf1SzEEYRA/T8YwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYw\nHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEoGA1UdEQRDMEGHBKwfFJ2C\nOWNhLnJldm9rZWNoYWluLml0aS5nb3YuYnIgRE5TLjI6Y2EtcmV2b2tlY2hhaW4t\naXRpLWdvdi1icjAKBggqhkjOPQQDAgNJADBGAiEA9gc34mwr6xE//esO0YDJ528h\nFCVuaTxk2sjwrdEOY8ICIQCbJXvtlhwjNjUDZAyCFRhjFlfTVmVdAfU9k8/8a25U\nBw==\n-----END CERTIFICATE-----"
       },
@@ -120,7 +120,7 @@
       "registrar": { "enrollId": "admin", "enrollSecret": "adminpw"}
     },
     "ca.revokechain.serpro.gov.br": {
-      "url": "https://ca.revokechain.serpro.gov.br:7054",
+      "url": "https://localhost:7054",
       "tlsCACerts": {
         "pem": "-----BEGIN CERTIFICATE-----\nMIIC4DCCAoagAwIBAgIUPKi0CXo3x2FYo3K2YRBjI9vl0qYwCgYIKoZIzj0EAwIw\ngYMxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEiMCAGA1UECgwZcmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjEl\nMCMGA1UEAwwcY2EucmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjAeFw0yMTA2MjQx\nOTMwMThaFw0zMTA2MjIxOTMwMThaMIGDMQswCQYDVQQGEwJVUzEXMBUGA1UECAwO\nTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxIjAgBgNVBAoMGXJldm9r\nZWNoYWluLnNlcnByby5nb3YuYnIxJTAjBgNVBAMMHGNhLnJldm9rZWNoYWluLnNl\ncnByby5nb3YuYnIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQ5EKnDqswrwDsI\nZ/3pNXV9xWmw/mV3t1E/CTwSV54Q0mKPKFzeAD3PFeX2WvVjmww//hn3ol2E0deA\nFhBjAxyvo4HVMIHSMB0GA1UdDgQWBBRc/76GAuX0Iry6Gj4AWH2tYq5QzDAfBgNV\nHSMEGDAWgBRc/76GAuX0Iry6Gj4AWH2tYq5QzDAPBgNVHRMBAf8EBTADAQH/MA4G\nA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwUAYD\nVR0RBEkwR4cErB8UnYI/Y2EucmV2b2tlY2hhaW4uc2VycHJvLmdvdi5iciBETlMu\nMjpjYS1yZXZva2VjaGFpbi1zZXJwcm8tZ292LWJyMAoGCCqGSM49BAMCA0gAMEUC\nIQDCbYCv9wazbAzKFj175sEG1ENZo5uMQ5K5H/Qq7dtyfgIgZIh/Lg/vfevQ20jS\nmPMQoM6nsp3TLAU3Vxd+nIrpvSI=\n-----END CERTIFICATE-----"
       },
@@ -134,46 +134,46 @@
       { "mappedHost": "orderer1.revokechain.gov.br",
         "pattern": "(\\w*)orderer1.revokechain.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "orderer1.revokechain.gov.br",
-        "urlSubstitutionExp": "orderer1.revokechain.gov.br:7050"
+        "urlSubstitutionExp": "localhost:7050"
       },
       { "mappedHost": "orderer2.revokechain.gov.br",
         "pattern": "(\\w*)orderer2.revokechain.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "orderer2.revokechain.gov.br",
-        "urlSubstitutionExp": "orderer2.revokechain.gov.br:7050"
+        "urlSubstitutionExp": "localhost:7050"
       }
     ],
     "peer": [
       { "mappedHost": "peer1.revokechain.iti.gov.br",
         "pattern": "(\\w*)peer1.revokechain.iti.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "peer1.revokechain.iti.gov.br",
-        "urlSubstitutionExp": "peer1.revokechain.iti.gov.br:7051"
+        "urlSubstitutionExp": "localhost:7051"
       },
       { "mappedHost": "peer2.revokechain.iti.gov.br",
         "pattern": "(\\w*)peer2.revokechain.iti.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "peer2.revokechain.iti.gov.br",
-        "urlSubstitutionExp": "peer2.revokechain.iti.gov.br:7051"
+        "urlSubstitutionExp": "localhost:7051"
       },
       { "mappedHost": "peer1.revokechain.serpro.gov.br",
         "pattern": "(\\w*)peer1.revokechain.serpro.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "peer1.revokechain.serpro.gov.br",
-        "urlSubstitutionExp": "peer1.revokechain.serpro.gov.br:7051"
+        "urlSubstitutionExp": "localhost:7051"
       },
       { "mappedHost": "peer2.revokechain.serpro.gov.br",
         "pattern": "(\\w*)peer2.revokechain.serpro.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "peer2.revokechain.serpro.gov.br",
-        "urlSubstitutionExp": "peer2.revokechain.serpro.gov.br:7051"
+        "urlSubstitutionExp": "localhost:7051"
       }
     ],
   "certificateAuthorities": [
       { "mappedHost": "ca.revokechain.iti.gov.br",
         "pattern": "(\\w*)ca.revokechain.iti.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "ca.revokechain.iti.gov.br",
-        "urlSubstitutionExp": "ca.revokechain.iti.gov.br:7054"
+        "urlSubstitutionExp": "localhost:7054"
       },
       { "mappedHost": "ca.revokechain.serpro.gov.br",
         "pattern": "(\\w*)ca.revokechain.serpro.gov.br(\\w*)",
         "sslTargetOverrideUrlSubstitutionExp": "ca.revokechain.serpro.gov.br",
-        "urlSubstitutionExp": "ca.revokechain.serpro.gov.br:7054"
+        "urlSubstitutionExp": "localhost:7054"
       }
     ]
   }

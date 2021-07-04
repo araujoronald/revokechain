@@ -23,7 +23,8 @@
     "node-nats-streaming": "^0.3.2",
     "pkcs11js": "^1.2.5",
     "swagger-jsdoc": "^6.0.0",
-    "swagger-ui-express": "^4.1.6"
+    "swagger-ui-express": "^4.1.6",
+    "timestamp-trusted": "^1.0.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.8",
