@@ -12,6 +12,13 @@ O projeto está dividido da seguinte forma:
 - [Smartcontract](/rc-chaincode/certificate-status/go)
 - [Docs](/docs)
 
+
+## Docker - API Gateway e Aplicação
+```bash
+$ docker-compose up
+```
+
+## Minifabric
 #### instalando o Minifabric
 ```bash
 $ curl -o minifab -sL https://tinyurl.com/yxa2q6yr && chmod +x minifab
