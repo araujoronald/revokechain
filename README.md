@@ -26,12 +26,12 @@ $ curl -o minifab -sL https://tinyurl.com/yxa2q6yr && chmod +x minifab
 
 #### iniciando o Minifabric
 ```bash
-$ ./minifab up
+$ ./minifab up -o org0.revokechain.br -e 7778
 ```
 
 #### parando o Minifabric
 ```bash
-$ ./minifab down
+$ ./minifab down -o org0.revokechain.br
 ```
 
 #### retomando o Minifabric
@@ -41,12 +41,12 @@ $ ./minifab netup
 
 #### instalando o smartcontract
 ```bash
-$ ./minifab install -n certificate-status -v 1.0 -o revokechain.serpro.gov.br 
+$ ./minifab install -n certificate-status -v 2.0 -o org0.revokechain.br
 ```
 
 #### confirmando o smartcontract
 ```bash
-$ ./minifab approve,commit,initialize,discover
+$ ./minifab approve,commit,initialize,discover -p '"InitLedger"'
 ```
 
 #### invocando um método do smartcontract. Ex: GetAllAssets
