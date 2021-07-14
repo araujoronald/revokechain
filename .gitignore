@@ -1,2 +1,9 @@
 vars/
 node_modules/
+vars-BKP/
+dist/
+vscode_profile/vscode.tgz
+vscode_profile/vscode/vscodenodefile.json
+vscode_profile/vscode/wallets/org0.revokechain.br/Admin.id
+vscode_profile/vscode/wallets/org1.revokechain.br/Admin.id
+vscode_profile/vscode/wallets/revokechain.br/Admin.id

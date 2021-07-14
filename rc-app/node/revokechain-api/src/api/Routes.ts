@@ -13,7 +13,7 @@ router.get('/api/revokechain/hello', (req: Request, res: Response) => {
 
 router.get('/api/revokechain/status/:ca/certificates/:serial', async (req: Request, res: Response) => {
   try {
-    const key = `${req.params.ca}:${req.params.serial}`
+    const key = `${req.params.serial}:${req.params.ca}`
     const result = await queryCert.execute(key)
     res.status(200).send([{ "revoked": result }])
     
@@ -33,9 +33,9 @@ router.post('/api/revokechain/certificates', async (req: Request, res: Response)
 
   try {
     // recuperar o carimbo do tempo e devolver
-    const timestamp = revokeTs.getTimestamp(entry)
+    //const timestamp = await revokeTs.getTimestamp(entry)
     addCert.execute(entry)
-    res.status(200).send([{ "timestamp": timestamp }])
+    res.status(200).send([{ "timestamp": new Date() }])
 
   } catch (error) {
     res.status(500).send('error: ' + error.message)

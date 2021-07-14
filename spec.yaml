@@ -1,15 +1,15 @@
 fabric:
   cas:
-  - "ca.revokechain.iti.gov.br"
-  - "ca.revokechain.serpro.gov.br"
+  - "ca.org0.revokechain.br"
+  - "ca.org1.revokechain.br"
   peers: 
-  - "peer1.revokechain.iti.gov.br"
-  - "peer2.revokechain.iti.gov.br"
-  - "peer1.revokechain.serpro.gov.br"
-  - "peer2.revokechain.serpro.gov.br"
+  - "peer1.org0.revokechain.br"
+  - "peer2.org0.revokechain.br"
+  - "peer1.org1.revokechain.br"
+  - "peer2.org1.revokechain.br"
   orderers:
-  - "orderer1.revokechain.gov.br"
-  - "orderer2.revokechain.gov.br"
+  - "orderer1.revokechain.br"
+  - "orderer2.revokechain.br"
   settings:
     ca:
       FABRIC_LOGGING_SPEC: DEBUG
@@ -21,8 +21,8 @@ fabric:
   ### the default goproxy
   # goproxy: "https://proxy.golang.org,direct"
   ### set the endpoint address to override the automatically detected IP address
-  # endpoint_address: 104.196.45.144
+  #endpoint_address: 127.0.0.1
   ### set the docker network name to override the automatically generated name.
-  netname: "revokechain-icpbrasil"
+  netname: "revokechain_icpbrasil"
   ### set the extra optins for docker run command
   # container_options: "--restart=always --log-opt max-size=10m --log-opt max-file=3"

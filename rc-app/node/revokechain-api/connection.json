@@ -5,124 +5,124 @@
   "channels": {
     "mychannel": {
       "orderers": [
-        "orderer1.revokechain.gov.br",
-        "orderer2.revokechain.gov.br"
+        "orderer1.revokechain.br",
+        "orderer2.revokechain.br"
       ],
       "peers": [
-        "peer1.revokechain.iti.gov.br",
-        "peer2.revokechain.iti.gov.br",
-        "peer1.revokechain.serpro.gov.br",
-        "peer2.revokechain.serpro.gov.br"
+        "peer1.org0.revokechain.br",
+        "peer2.org0.revokechain.br",
+        "peer1.org1.revokechain.br",
+        "peer2.org1.revokechain.br"
       ]
     }
   },
   "organizations": {
-    "revokechain.gov.br": {
-      "mspid": "revokechain-gov-br",
+    "org0.revokechain.br": {
+      "mspid": "org0-revokechain-br",
       "peers": [
-      ],
-      "orderers": [
-        "orderer1.revokechain.gov.br",
-        "orderer2.revokechain.gov.br"
-      ]
-    },
-    "revokechain.iti.gov.br": {
-      "mspid": "revokechain-iti-gov-br",
-      "peers": [
-        "peer1.revokechain.iti.gov.br",
-        "peer2.revokechain.iti.gov.br"
+        "peer1.org0.revokechain.br",
+        "peer2.org0.revokechain.br"
       ],
       "orderers": [
       ],
       "certificateAuthorities": [
-        "ca.revokechain.iti.gov.br"
+        "ca.org0.revokechain.br"
       ]
     },
-    "revokechain.serpro.gov.br": {
-      "mspid": "revokechain-serpro-gov-br",
+    "org1.revokechain.br": {
+      "mspid": "org1-revokechain-br",
       "peers": [
-        "peer1.revokechain.serpro.gov.br",
-        "peer2.revokechain.serpro.gov.br"
+        "peer1.org1.revokechain.br",
+        "peer2.org1.revokechain.br"
       ],
       "orderers": [
       ],
       "certificateAuthorities": [
-        "ca.revokechain.serpro.gov.br"
+        "ca.org1.revokechain.br"
+      ]
+    },
+    "revokechain.br": {
+      "mspid": "revokechain-br",
+      "peers": [
+      ],
+      "orderers": [
+        "orderer1.revokechain.br",
+        "orderer2.revokechain.br"
       ]
     }
   },
   "orderers": {
-    "orderer1.revokechain.gov.br": {
-      "url": "grpcs://localhost:7050",
+    "orderer1.revokechain.br": {
+      "url": "grpcs://172.22.154.251:7784",
       "grpcOptions": {
-        "ssl-target-name-override": "orderer1.revokechain.gov.br"
+        "ssl-target-name-override": "orderer1.revokechain.br"
       },
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIICvzCCAmagAwIBAgIUBS3IxqQuUZhHntzAlsq83AtSxX8wCgYIKoZIzj0EAwIw\neDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRswGQYDVQQKDBJyZXZva2VjaGFpbi5nb3YuYnIxITAfBgNVBAMM\nGHRsc2NhLnJldm9rZWNoYWluLmdvdi5icjAeFw0yMTA2MjQxOTI5NDlaFw0zMTA2\nMjIxOTI5NDlaMHgxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGlu\nYTEQMA4GA1UEBwwHUmFsZWlnaDEbMBkGA1UECgwScmV2b2tlY2hhaW4uZ292LmJy\nMSEwHwYDVQQDDBh0bHNjYS5yZXZva2VjaGFpbi5nb3YuYnIwWTATBgcqhkjOPQIB\nBggqhkjOPQMBBwNCAASkUFna0ru2e3iYzGbb4iOK+yUWxtWDl9GCLK+Pstygglrt\nFy5YLWvUBUlk1V6e2IeWN8veJNoK7Y60Gh3bOwBfo4HNMIHKMB0GA1UdDgQWBBSr\nfPu0Qw8kr1MtqIffyECw5sMsxDAfBgNVHSMEGDAWgBSrfPu0Qw8kr1MtqIffyECw\n5sMsxDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAU\nBggrBgEFBQcDAQYIKwYBBQUHAwIwSAYDVR0RBEEwP4cErB8UnYI3dGxzY2EucmV2\nb2tlY2hhaW4uZ292LmJyIEROUy4yOnRsc2NhLXJldm9rZWNoYWluLWdvdi1icjAK\nBggqhkjOPQQDAgNHADBEAiAIepdqeok8EtC5X6ein4Qaj1HXmuaYkTl/pnNA1ehr\nwQIgFHf/lnDEfAaCnr72YTah4c07DcCQ5PxpwHDdnnHOENM=\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICpzCCAk6gAwIBAgIUFjdOguxOmwM2paTE0R34WtvSBhEwCgYIKoZIzj0EAwIw\ncDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRcwFQYDVQQKDA5yZXZva2VjaGFpbi5icjEdMBsGA1UEAwwUdGxz\nY2EucmV2b2tlY2hhaW4uYnIwHhcNMjEwNzE0MTQ0NjE5WhcNMzEwNzEyMTQ0NjE5\nWjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNV\nBAcMB1JhbGVpZ2gxFzAVBgNVBAoMDnJldm9rZWNoYWluLmJyMR0wGwYDVQQDDBR0\nbHNjYS5yZXZva2VjaGFpbi5icjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABPtH\noFjMqgsp+7wWeH6i6B5ZfCIxnxSIXV5AYV58glov+rZf9894DLEJ16fMJ1pQeAj9\nTluxTOA1YUT5E8L+ggOjgcUwgcIwHQYDVR0OBBYEFIhTNKwJbJoGRav9Iqel+nn6\nINgfMB8GA1UdIwQYMBaAFIhTNKwJbJoGRav9Iqel+nn6INgfMA8GA1UdEwEB/wQF\nMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEF\nBQcDAjBABgNVHREEOTA3hwSsFpr7gi90bHNjYS5yZXZva2VjaGFpbi5iciBETlMu\nMjp0bHNjYS1yZXZva2VjaGFpbi1icjAKBggqhkjOPQQDAgNHADBEAiAL+aWP9UFa\nC1Il58yzlUznjtLIA41AChYJyXtCrbsylQIgO/NAqAvnkhpHrwkZtLfw1dEBG16o\n9b9lrVFNgLiKvPg=\n-----END CERTIFICATE-----"
       }
     },
-    "orderer2.revokechain.gov.br": {
-      "url": "grpcs://localhost:7050",
+    "orderer2.revokechain.br": {
+      "url": "grpcs://172.22.154.251:7785",
       "grpcOptions": {
-        "ssl-target-name-override": "orderer2.revokechain.gov.br"
+        "ssl-target-name-override": "orderer2.revokechain.br"
       },
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIICvzCCAmagAwIBAgIUBS3IxqQuUZhHntzAlsq83AtSxX8wCgYIKoZIzj0EAwIw\neDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRswGQYDVQQKDBJyZXZva2VjaGFpbi5nb3YuYnIxITAfBgNVBAMM\nGHRsc2NhLnJldm9rZWNoYWluLmdvdi5icjAeFw0yMTA2MjQxOTI5NDlaFw0zMTA2\nMjIxOTI5NDlaMHgxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGlu\nYTEQMA4GA1UEBwwHUmFsZWlnaDEbMBkGA1UECgwScmV2b2tlY2hhaW4uZ292LmJy\nMSEwHwYDVQQDDBh0bHNjYS5yZXZva2VjaGFpbi5nb3YuYnIwWTATBgcqhkjOPQIB\nBggqhkjOPQMBBwNCAASkUFna0ru2e3iYzGbb4iOK+yUWxtWDl9GCLK+Pstygglrt\nFy5YLWvUBUlk1V6e2IeWN8veJNoK7Y60Gh3bOwBfo4HNMIHKMB0GA1UdDgQWBBSr\nfPu0Qw8kr1MtqIffyECw5sMsxDAfBgNVHSMEGDAWgBSrfPu0Qw8kr1MtqIffyECw\n5sMsxDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAU\nBggrBgEFBQcDAQYIKwYBBQUHAwIwSAYDVR0RBEEwP4cErB8UnYI3dGxzY2EucmV2\nb2tlY2hhaW4uZ292LmJyIEROUy4yOnRsc2NhLXJldm9rZWNoYWluLWdvdi1icjAK\nBggqhkjOPQQDAgNHADBEAiAIepdqeok8EtC5X6ein4Qaj1HXmuaYkTl/pnNA1ehr\nwQIgFHf/lnDEfAaCnr72YTah4c07DcCQ5PxpwHDdnnHOENM=\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICpzCCAk6gAwIBAgIUFjdOguxOmwM2paTE0R34WtvSBhEwCgYIKoZIzj0EAwIw\ncDELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRcwFQYDVQQKDA5yZXZva2VjaGFpbi5icjEdMBsGA1UEAwwUdGxz\nY2EucmV2b2tlY2hhaW4uYnIwHhcNMjEwNzE0MTQ0NjE5WhcNMzEwNzEyMTQ0NjE5\nWjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNV\nBAcMB1JhbGVpZ2gxFzAVBgNVBAoMDnJldm9rZWNoYWluLmJyMR0wGwYDVQQDDBR0\nbHNjYS5yZXZva2VjaGFpbi5icjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABPtH\noFjMqgsp+7wWeH6i6B5ZfCIxnxSIXV5AYV58glov+rZf9894DLEJ16fMJ1pQeAj9\nTluxTOA1YUT5E8L+ggOjgcUwgcIwHQYDVR0OBBYEFIhTNKwJbJoGRav9Iqel+nn6\nINgfMB8GA1UdIwQYMBaAFIhTNKwJbJoGRav9Iqel+nn6INgfMA8GA1UdEwEB/wQF\nMAMBAf8wDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEF\nBQcDAjBABgNVHREEOTA3hwSsFpr7gi90bHNjYS5yZXZva2VjaGFpbi5iciBETlMu\nMjp0bHNjYS1yZXZva2VjaGFpbi1icjAKBggqhkjOPQQDAgNHADBEAiAL+aWP9UFa\nC1Il58yzlUznjtLIA41AChYJyXtCrbsylQIgO/NAqAvnkhpHrwkZtLfw1dEBG16o\n9b9lrVFNgLiKvPg=\n-----END CERTIFICATE-----"
       }
     }
   },
   "peers": {
-    "peer1.revokechain.iti.gov.br": {
-      "url": "grpcs://localhost:7051",
+    "peer1.org0.revokechain.br": {
+      "url": "grpcs://172.22.154.251:7780",
       "grpcOptions": {
-        "ssl-target-name-override": "peer1.revokechain.iti.gov.br"
+        "ssl-target-name-override": "peer1.org0.revokechain.br"
       },
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIIC2jCCAoCgAwIBAgIUMgzebywiTZ3h7x3JPn0DC4UHzUcwCgYIKoZIzj0EAwIw\ngYAxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEfMB0GA1UECgwWcmV2b2tlY2hhaW4uaXRpLmdvdi5icjElMCMG\nA1UEAwwcdGxzY2EucmV2b2tlY2hhaW4uaXRpLmdvdi5icjAeFw0yMTA2MjQxOTMw\nMDNaFw0zMTA2MjIxOTMwMDNaMIGAMQswCQYDVQQGEwJVUzEXMBUGA1UECAwOTm9y\ndGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxHzAdBgNVBAoMFnJldm9rZWNo\nYWluLml0aS5nb3YuYnIxJTAjBgNVBAMMHHRsc2NhLnJldm9rZWNoYWluLml0aS5n\nb3YuYnIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASWv9RlQzVSFvi3glYkeCSj\npgzC4PJlSdkraXGzKVC8LDczm1wEqP6l1Px04JMi6kXJT/cDdzfFcEXGnCFbTkDm\no4HVMIHSMB0GA1UdDgQWBBQ3jYfsqb9fXdu4XMpMal6XGRucFDAfBgNVHSMEGDAW\ngBQ3jYfsqb9fXdu4XMpMal6XGRucFDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB\n/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwUAYDVR0RBEkw\nR4cErB8UnYI/dGxzY2EucmV2b2tlY2hhaW4uaXRpLmdvdi5iciBETlMuMjp0bHNj\nYS1yZXZva2VjaGFpbi1pdGktZ292LWJyMAoGCCqGSM49BAMCA0gAMEUCIGJVP7g3\nQq7dK6cxmchKmIPwyaL1A3u6uExboBDFiqAeAiEA9AYWEDdsZBITnGjOjL2J7D4c\n52swaG8Mjzg8rSDdbbA=\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICxjCCAmygAwIBAgIUQjsKwljSlG+YqLCBZ41IzAR16fkwCgYIKoZIzj0EAwIw\nejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcwLnJldm9rZWNoYWluLmJyMSIwIAYDVQQD\nDBl0bHNjYS5vcmcwLnJldm9rZWNoYWluLmJyMB4XDTIxMDcxNDE0NDU0OVoXDTMx\nMDcxMjE0NDU0OVowejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9s\naW5hMRAwDgYDVQQHDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcwLnJldm9rZWNoYWlu\nLmJyMSIwIAYDVQQDDBl0bHNjYS5vcmcwLnJldm9rZWNoYWluLmJyMFkwEwYHKoZI\nzj0CAQYIKoZIzj0DAQcDQgAEPMBqqaWMsCpbwqaDaprDuI7dT3xPMg5hNsFdtF/A\nDQiUX5hSa3PIUOylWDgWYCSAlCFZ9hBWhdvo5bFzXGeJUKOBzzCBzDAdBgNVHQ4E\nFgQU1whCCvXEiFbVMWi5MKLc7naLoWUwHwYDVR0jBBgwFoAU1whCCvXEiFbVMWi5\nMKLc7naLoWUwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0l\nBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEoGA1UdEQRDMEGHBKwWmvuCOXRsc2Nh\nLm9yZzAucmV2b2tlY2hhaW4uYnIgRE5TLjI6dGxzY2Etb3JnMC1yZXZva2VjaGFp\nbi1icjAKBggqhkjOPQQDAgNIADBFAiBDGcqhrD2bPXCqmAFU0NGDJ4NBG0P1JLhO\ngwglL22umAIhAKgSM8lEjn2L6vKHofY3bS/y1sqbxkAfTyhmtYG+7Btg\n-----END CERTIFICATE-----"
       }
     },
-    "peer2.revokechain.iti.gov.br": {
-      "url": "grpcs://localhost:7051",
+    "peer2.org0.revokechain.br": {
+      "url": "grpcs://172.22.154.251:7781",
       "grpcOptions": {
-        "ssl-target-name-override": "peer2.revokechain.iti.gov.br"
+        "ssl-target-name-override": "peer2.org0.revokechain.br"
       },
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIIC2jCCAoCgAwIBAgIUMgzebywiTZ3h7x3JPn0DC4UHzUcwCgYIKoZIzj0EAwIw\ngYAxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEfMB0GA1UECgwWcmV2b2tlY2hhaW4uaXRpLmdvdi5icjElMCMG\nA1UEAwwcdGxzY2EucmV2b2tlY2hhaW4uaXRpLmdvdi5icjAeFw0yMTA2MjQxOTMw\nMDNaFw0zMTA2MjIxOTMwMDNaMIGAMQswCQYDVQQGEwJVUzEXMBUGA1UECAwOTm9y\ndGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxHzAdBgNVBAoMFnJldm9rZWNo\nYWluLml0aS5nb3YuYnIxJTAjBgNVBAMMHHRsc2NhLnJldm9rZWNoYWluLml0aS5n\nb3YuYnIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASWv9RlQzVSFvi3glYkeCSj\npgzC4PJlSdkraXGzKVC8LDczm1wEqP6l1Px04JMi6kXJT/cDdzfFcEXGnCFbTkDm\no4HVMIHSMB0GA1UdDgQWBBQ3jYfsqb9fXdu4XMpMal6XGRucFDAfBgNVHSMEGDAW\ngBQ3jYfsqb9fXdu4XMpMal6XGRucFDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB\n/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwUAYDVR0RBEkw\nR4cErB8UnYI/dGxzY2EucmV2b2tlY2hhaW4uaXRpLmdvdi5iciBETlMuMjp0bHNj\nYS1yZXZva2VjaGFpbi1pdGktZ292LWJyMAoGCCqGSM49BAMCA0gAMEUCIGJVP7g3\nQq7dK6cxmchKmIPwyaL1A3u6uExboBDFiqAeAiEA9AYWEDdsZBITnGjOjL2J7D4c\n52swaG8Mjzg8rSDdbbA=\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICxjCCAmygAwIBAgIUQjsKwljSlG+YqLCBZ41IzAR16fkwCgYIKoZIzj0EAwIw\nejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcwLnJldm9rZWNoYWluLmJyMSIwIAYDVQQD\nDBl0bHNjYS5vcmcwLnJldm9rZWNoYWluLmJyMB4XDTIxMDcxNDE0NDU0OVoXDTMx\nMDcxMjE0NDU0OVowejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9s\naW5hMRAwDgYDVQQHDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcwLnJldm9rZWNoYWlu\nLmJyMSIwIAYDVQQDDBl0bHNjYS5vcmcwLnJldm9rZWNoYWluLmJyMFkwEwYHKoZI\nzj0CAQYIKoZIzj0DAQcDQgAEPMBqqaWMsCpbwqaDaprDuI7dT3xPMg5hNsFdtF/A\nDQiUX5hSa3PIUOylWDgWYCSAlCFZ9hBWhdvo5bFzXGeJUKOBzzCBzDAdBgNVHQ4E\nFgQU1whCCvXEiFbVMWi5MKLc7naLoWUwHwYDVR0jBBgwFoAU1whCCvXEiFbVMWi5\nMKLc7naLoWUwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0l\nBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEoGA1UdEQRDMEGHBKwWmvuCOXRsc2Nh\nLm9yZzAucmV2b2tlY2hhaW4uYnIgRE5TLjI6dGxzY2Etb3JnMC1yZXZva2VjaGFp\nbi1icjAKBggqhkjOPQQDAgNIADBFAiBDGcqhrD2bPXCqmAFU0NGDJ4NBG0P1JLhO\ngwglL22umAIhAKgSM8lEjn2L6vKHofY3bS/y1sqbxkAfTyhmtYG+7Btg\n-----END CERTIFICATE-----"
       }
     },
-    "peer1.revokechain.serpro.gov.br": {
-      "url": "grpcs://localhost:7051",
+    "peer1.org1.revokechain.br": {
+      "url": "grpcs://172.22.154.251:7782",
       "grpcOptions": {
-        "ssl-target-name-override": "peer1.revokechain.serpro.gov.br"
+        "ssl-target-name-override": "peer1.org1.revokechain.br"
       },
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIIC6zCCApKgAwIBAgIURVofT+5HuOsRlE4RfUjBItVgo5owCgYIKoZIzj0EAwIw\ngYYxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEiMCAGA1UECgwZcmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjEo\nMCYGA1UEAwwfdGxzY2EucmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjAeFw0yMTA2\nMjQxOTMwMThaFw0zMTA2MjIxOTMwMThaMIGGMQswCQYDVQQGEwJVUzEXMBUGA1UE\nCAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxIjAgBgNVBAoMGXJl\ndm9rZWNoYWluLnNlcnByby5nb3YuYnIxKDAmBgNVBAMMH3Rsc2NhLnJldm9rZWNo\nYWluLnNlcnByby5nb3YuYnIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASB+gz0\njmluZVJou1ghr7O2Puw13H49kynjE8FjIdIk1w+rkI/EYkp3b+hg0BjEFBmETAmP\n6sCFnnppWnE18XqHo4HbMIHYMB0GA1UdDgQWBBSOx2t7JoBviwSzcEJnVn8Ain57\nZDAfBgNVHSMEGDAWgBSOx2t7JoBviwSzcEJnVn8Ain57ZDAPBgNVHRMBAf8EBTAD\nAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUH\nAwIwVgYDVR0RBE8wTYcErB8UnYJFdGxzY2EucmV2b2tlY2hhaW4uc2VycHJvLmdv\ndi5iciBETlMuMjp0bHNjYS1yZXZva2VjaGFpbi1zZXJwcm8tZ292LWJyMAoGCCqG\nSM49BAMCA0cAMEQCIHRK9ydp0je3vMiZ9G2CWkzaW3HTR7PpmpSzJgREcAZmAiB7\nceGunQZ0stst/LjGD8HgY4yyxVZFjSDf9oRwbuCDSA==\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICxzCCAmygAwIBAgIUUME7bQC7q0hjWbX+2yQFWTJrYskwCgYIKoZIzj0EAwIw\nejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcxLnJldm9rZWNoYWluLmJyMSIwIAYDVQQD\nDBl0bHNjYS5vcmcxLnJldm9rZWNoYWluLmJyMB4XDTIxMDcxNDE0NDYwNFoXDTMx\nMDcxMjE0NDYwNFowejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9s\naW5hMRAwDgYDVQQHDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcxLnJldm9rZWNoYWlu\nLmJyMSIwIAYDVQQDDBl0bHNjYS5vcmcxLnJldm9rZWNoYWluLmJyMFkwEwYHKoZI\nzj0CAQYIKoZIzj0DAQcDQgAEOJWK63sT6MO4XleiDkm3+VcDrVOO4y1WPwuGdnjJ\nopAXMLu5ZlKs+EiulnG7DPZUbTUf1GEUVkBcN5+stdX/qaOBzzCBzDAdBgNVHQ4E\nFgQU/pZXuxQfPbGqlBMszbV1EbUYRPcwHwYDVR0jBBgwFoAU/pZXuxQfPbGqlBMs\nzbV1EbUYRPcwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0l\nBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEoGA1UdEQRDMEGHBKwWmvuCOXRsc2Nh\nLm9yZzEucmV2b2tlY2hhaW4uYnIgRE5TLjI6dGxzY2Etb3JnMS1yZXZva2VjaGFp\nbi1icjAKBggqhkjOPQQDAgNJADBGAiEAld5AbRySO7F02Td5tXg3oyxvdHTe8+eJ\nPCNVrm29mHMCIQCfAb8bVUuKHogxRg/SbmdxYYzMRqbBXobQtpWUnxE4fg==\n-----END CERTIFICATE-----"
       }
     },
-    "peer2.revokechain.serpro.gov.br": {
-      "url": "grpcs://localhost:7051",
+    "peer2.org1.revokechain.br": {
+      "url": "grpcs://172.22.154.251:7783",
       "grpcOptions": {
-        "ssl-target-name-override": "peer2.revokechain.serpro.gov.br"
+        "ssl-target-name-override": "peer2.org1.revokechain.br"
       },
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIIC6zCCApKgAwIBAgIURVofT+5HuOsRlE4RfUjBItVgo5owCgYIKoZIzj0EAwIw\ngYYxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEiMCAGA1UECgwZcmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjEo\nMCYGA1UEAwwfdGxzY2EucmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjAeFw0yMTA2\nMjQxOTMwMThaFw0zMTA2MjIxOTMwMThaMIGGMQswCQYDVQQGEwJVUzEXMBUGA1UE\nCAwOTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxIjAgBgNVBAoMGXJl\ndm9rZWNoYWluLnNlcnByby5nb3YuYnIxKDAmBgNVBAMMH3Rsc2NhLnJldm9rZWNo\nYWluLnNlcnByby5nb3YuYnIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASB+gz0\njmluZVJou1ghr7O2Puw13H49kynjE8FjIdIk1w+rkI/EYkp3b+hg0BjEFBmETAmP\n6sCFnnppWnE18XqHo4HbMIHYMB0GA1UdDgQWBBSOx2t7JoBviwSzcEJnVn8Ain57\nZDAfBgNVHSMEGDAWgBSOx2t7JoBviwSzcEJnVn8Ain57ZDAPBgNVHRMBAf8EBTAD\nAQH/MA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUH\nAwIwVgYDVR0RBE8wTYcErB8UnYJFdGxzY2EucmV2b2tlY2hhaW4uc2VycHJvLmdv\ndi5iciBETlMuMjp0bHNjYS1yZXZva2VjaGFpbi1zZXJwcm8tZ292LWJyMAoGCCqG\nSM49BAMCA0cAMEQCIHRK9ydp0je3vMiZ9G2CWkzaW3HTR7PpmpSzJgREcAZmAiB7\nceGunQZ0stst/LjGD8HgY4yyxVZFjSDf9oRwbuCDSA==\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICxzCCAmygAwIBAgIUUME7bQC7q0hjWbX+2yQFWTJrYskwCgYIKoZIzj0EAwIw\nejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcxLnJldm9rZWNoYWluLmJyMSIwIAYDVQQD\nDBl0bHNjYS5vcmcxLnJldm9rZWNoYWluLmJyMB4XDTIxMDcxNDE0NDYwNFoXDTMx\nMDcxMjE0NDYwNFowejELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9s\naW5hMRAwDgYDVQQHDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcxLnJldm9rZWNoYWlu\nLmJyMSIwIAYDVQQDDBl0bHNjYS5vcmcxLnJldm9rZWNoYWluLmJyMFkwEwYHKoZI\nzj0CAQYIKoZIzj0DAQcDQgAEOJWK63sT6MO4XleiDkm3+VcDrVOO4y1WPwuGdnjJ\nopAXMLu5ZlKs+EiulnG7DPZUbTUf1GEUVkBcN5+stdX/qaOBzzCBzDAdBgNVHQ4E\nFgQU/pZXuxQfPbGqlBMszbV1EbUYRPcwHwYDVR0jBBgwFoAU/pZXuxQfPbGqlBMs\nzbV1EbUYRPcwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0l\nBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEoGA1UdEQRDMEGHBKwWmvuCOXRsc2Nh\nLm9yZzEucmV2b2tlY2hhaW4uYnIgRE5TLjI6dGxzY2Etb3JnMS1yZXZva2VjaGFp\nbi1icjAKBggqhkjOPQQDAgNJADBGAiEAld5AbRySO7F02Td5tXg3oyxvdHTe8+eJ\nPCNVrm29mHMCIQCfAb8bVUuKHogxRg/SbmdxYYzMRqbBXobQtpWUnxE4fg==\n-----END CERTIFICATE-----"
       }
     }
   },
   "certificateAuthorities": {
-    "ca.revokechain.iti.gov.br": {
-      "url": "https://localhost:7054",
+    "ca.org0.revokechain.br": {
+      "url": "https://172.22.154.251:7778",
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIICzTCCAnKgAwIBAgIUfLtSQkTQjLn5g7mmSOmePkPlGfgwCgYIKoZIzj0EAwIw\nfTELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMR8wHQYDVQQKDBZyZXZva2VjaGFpbi5pdGkuZ292LmJyMSIwIAYD\nVQQDDBljYS5yZXZva2VjaGFpbi5pdGkuZ292LmJyMB4XDTIxMDYyNDE5MzAwM1oX\nDTMxMDYyMjE5MzAwM1owfTELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENh\ncm9saW5hMRAwDgYDVQQHDAdSYWxlaWdoMR8wHQYDVQQKDBZyZXZva2VjaGFpbi5p\ndGkuZ292LmJyMSIwIAYDVQQDDBljYS5yZXZva2VjaGFpbi5pdGkuZ292LmJyMFkw\nEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/7eOKwQbWsWAda09ddhxVaSi/5vWZf/A\niDtiduqSCCSfE2hIVlrxoNFucAdL5Kxx7OhdgfEV1gE1oOrFnx6t1aOBzzCBzDAd\nBgNVHQ4EFgQUcsXNt08ICNW/+Uf1SzEEYRA/T8YwHwYDVR0jBBgwFoAUcsXNt08I\nCNW/+Uf1SzEEYRA/T8YwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYw\nHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEoGA1UdEQRDMEGHBKwfFJ2C\nOWNhLnJldm9rZWNoYWluLml0aS5nb3YuYnIgRE5TLjI6Y2EtcmV2b2tlY2hhaW4t\naXRpLWdvdi1icjAKBggqhkjOPQQDAgNJADBGAiEA9gc34mwr6xE//esO0YDJ528h\nFCVuaTxk2sjwrdEOY8ICIQCbJXvtlhwjNjUDZAyCFRhjFlfTVmVdAfU9k8/8a25U\nBw==\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICujCCAmCgAwIBAgIUfwAi7st8kwm1y8f7Gc+cu4K/13IwCgYIKoZIzj0EAwIw\ndzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcwLnJldm9rZWNoYWluLmJyMR8wHQYDVQQD\nDBZjYS5vcmcwLnJldm9rZWNoYWluLmJyMB4XDTIxMDcxNDE0NDU0OVoXDTMxMDcx\nMjE0NDU0OVowdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5h\nMRAwDgYDVQQHDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcwLnJldm9rZWNoYWluLmJy\nMR8wHQYDVQQDDBZjYS5vcmcwLnJldm9rZWNoYWluLmJyMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEwfiDJX2s1f+sKLxu0egAf9anrAy+2Wtq7wuuNG3pwLoVOrm/\n78939GfVWv1OWktTUSAepid3O0dOUv/PkX+XV6OByTCBxjAdBgNVHQ4EFgQUNVSp\n449R0yVuEpQNqRo3UqP431cwHwYDVR0jBBgwFoAUNVSp449R0yVuEpQNqRo3UqP4\n31cwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYI\nKwYBBQUHAwEGCCsGAQUFBwMCMEQGA1UdEQQ9MDuHBKwWmvuCM2NhLm9yZzAucmV2\nb2tlY2hhaW4uYnIgRE5TLjI6Y2Etb3JnMC1yZXZva2VjaGFpbi1icjAKBggqhkjO\nPQQDAgNIADBFAiA5M+gM1+uxn6iwfvlDRT0txSh6ZxnMENDTOYf1DjXoSwIhALoy\nlfFWprsyZ+J9FZ7uGTs8owItSflZtiDOOQVqjWuq\n-----END CERTIFICATE-----"
       },
       "httpOptions": { "verify": "false" },
       "caName": "ca",
       "registrar": { "enrollId": "admin", "enrollSecret": "adminpw"}
     },
-    "ca.revokechain.serpro.gov.br": {
-      "url": "https://localhost:7054",
+    "ca.org1.revokechain.br": {
+      "url": "https://172.22.154.251:7779",
       "tlsCACerts": {
-        "pem": "-----BEGIN CERTIFICATE-----\nMIIC4DCCAoagAwIBAgIUPKi0CXo3x2FYo3K2YRBjI9vl0qYwCgYIKoZIzj0EAwIw\ngYMxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEQMA4GA1UE\nBwwHUmFsZWlnaDEiMCAGA1UECgwZcmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjEl\nMCMGA1UEAwwcY2EucmV2b2tlY2hhaW4uc2VycHJvLmdvdi5icjAeFw0yMTA2MjQx\nOTMwMThaFw0zMTA2MjIxOTMwMThaMIGDMQswCQYDVQQGEwJVUzEXMBUGA1UECAwO\nTm9ydGggQ2Fyb2xpbmExEDAOBgNVBAcMB1JhbGVpZ2gxIjAgBgNVBAoMGXJldm9r\nZWNoYWluLnNlcnByby5nb3YuYnIxJTAjBgNVBAMMHGNhLnJldm9rZWNoYWluLnNl\ncnByby5nb3YuYnIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQ5EKnDqswrwDsI\nZ/3pNXV9xWmw/mV3t1E/CTwSV54Q0mKPKFzeAD3PFeX2WvVjmww//hn3ol2E0deA\nFhBjAxyvo4HVMIHSMB0GA1UdDgQWBBRc/76GAuX0Iry6Gj4AWH2tYq5QzDAfBgNV\nHSMEGDAWgBRc/76GAuX0Iry6Gj4AWH2tYq5QzDAPBgNVHRMBAf8EBTADAQH/MA4G\nA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwUAYD\nVR0RBEkwR4cErB8UnYI/Y2EucmV2b2tlY2hhaW4uc2VycHJvLmdvdi5iciBETlMu\nMjpjYS1yZXZva2VjaGFpbi1zZXJwcm8tZ292LWJyMAoGCCqGSM49BAMCA0gAMEUC\nIQDCbYCv9wazbAzKFj175sEG1ENZo5uMQ5K5H/Qq7dtyfgIgZIh/Lg/vfevQ20jS\nmPMQoM6nsp3TLAU3Vxd+nIrpvSI=\n-----END CERTIFICATE-----"
+        "pem": "-----BEGIN CERTIFICATE-----\nMIICuTCCAmCgAwIBAgIUESnvHHNfcMSX9oyhLoPsDQeR7UwwCgYIKoZIzj0EAwIw\ndzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5hMRAwDgYDVQQH\nDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcxLnJldm9rZWNoYWluLmJyMR8wHQYDVQQD\nDBZjYS5vcmcxLnJldm9rZWNoYWluLmJyMB4XDTIxMDcxNDE0NDYwNFoXDTMxMDcx\nMjE0NDYwNFowdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgMDk5vcnRoIENhcm9saW5h\nMRAwDgYDVQQHDAdSYWxlaWdoMRwwGgYDVQQKDBNvcmcxLnJldm9rZWNoYWluLmJy\nMR8wHQYDVQQDDBZjYS5vcmcxLnJldm9rZWNoYWluLmJyMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEnaud/L8luw1qHP4TUd+mWXq+Lf5LiNpmGNyXewXsQ2gpIP8P\nLqryafBYPzpyjTtbZfj6HiouNdjyDB5MNanVeqOByTCBxjAdBgNVHQ4EFgQUMgZz\nMJoUjmbYALZvCnpkGyn4j4kwHwYDVR0jBBgwFoAUMgZzMJoUjmbYALZvCnpkGyn4\nj4kwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYI\nKwYBBQUHAwEGCCsGAQUFBwMCMEQGA1UdEQQ9MDuHBKwWmvuCM2NhLm9yZzEucmV2\nb2tlY2hhaW4uYnIgRE5TLjI6Y2Etb3JnMS1yZXZva2VjaGFpbi1icjAKBggqhkjO\nPQQDAgNHADBEAiAssdiDF/rjJEuTJaYP7dqUCzGaymm4ZMi4GfOZZ4KtbgIgA4Po\nj8sSmdNIPcZoPthKIKfDTPQ3BbFHfapFtYl8Ve8=\n-----END CERTIFICATE-----"
       },
       "httpOptions": { "verify": "false" },
       "caName": "ca",
@@ -131,49 +131,49 @@
   },
   "entityMatchers": {
     "orderer": [
-      { "mappedHost": "orderer1.revokechain.gov.br",
-        "pattern": "(\\w*)orderer1.revokechain.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "orderer1.revokechain.gov.br",
-        "urlSubstitutionExp": "localhost:7050"
+      { "mappedHost": "orderer1.revokechain.br",
+        "pattern": "(\\w*)orderer1.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "orderer1.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7784"
       },
-      { "mappedHost": "orderer2.revokechain.gov.br",
-        "pattern": "(\\w*)orderer2.revokechain.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "orderer2.revokechain.gov.br",
-        "urlSubstitutionExp": "localhost:7050"
+      { "mappedHost": "orderer2.revokechain.br",
+        "pattern": "(\\w*)orderer2.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "orderer2.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7785"
       }
     ],
     "peer": [
-      { "mappedHost": "peer1.revokechain.iti.gov.br",
-        "pattern": "(\\w*)peer1.revokechain.iti.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "peer1.revokechain.iti.gov.br",
-        "urlSubstitutionExp": "localhost:7051"
+      { "mappedHost": "peer1.org0.revokechain.br",
+        "pattern": "(\\w*)peer1.org0.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "peer1.org0.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7780"
       },
-      { "mappedHost": "peer2.revokechain.iti.gov.br",
-        "pattern": "(\\w*)peer2.revokechain.iti.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "peer2.revokechain.iti.gov.br",
-        "urlSubstitutionExp": "localhost:7051"
+      { "mappedHost": "peer2.org0.revokechain.br",
+        "pattern": "(\\w*)peer2.org0.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "peer2.org0.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7781"
       },
-      { "mappedHost": "peer1.revokechain.serpro.gov.br",
-        "pattern": "(\\w*)peer1.revokechain.serpro.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "peer1.revokechain.serpro.gov.br",
-        "urlSubstitutionExp": "localhost:7051"
+      { "mappedHost": "peer1.org1.revokechain.br",
+        "pattern": "(\\w*)peer1.org1.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "peer1.org1.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7782"
       },
-      { "mappedHost": "peer2.revokechain.serpro.gov.br",
-        "pattern": "(\\w*)peer2.revokechain.serpro.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "peer2.revokechain.serpro.gov.br",
-        "urlSubstitutionExp": "localhost:7051"
+      { "mappedHost": "peer2.org1.revokechain.br",
+        "pattern": "(\\w*)peer2.org1.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "peer2.org1.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7783"
       }
     ],
   "certificateAuthorities": [
-      { "mappedHost": "ca.revokechain.iti.gov.br",
-        "pattern": "(\\w*)ca.revokechain.iti.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "ca.revokechain.iti.gov.br",
-        "urlSubstitutionExp": "localhost:7054"
+      { "mappedHost": "ca.org0.revokechain.br",
+        "pattern": "(\\w*)ca.org0.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "ca.org0.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7778"
       },
-      { "mappedHost": "ca.revokechain.serpro.gov.br",
-        "pattern": "(\\w*)ca.revokechain.serpro.gov.br(\\w*)",
-        "sslTargetOverrideUrlSubstitutionExp": "ca.revokechain.serpro.gov.br",
-        "urlSubstitutionExp": "localhost:7054"
+      { "mappedHost": "ca.org1.revokechain.br",
+        "pattern": "(\\w*)ca.org1.revokechain.br(\\w*)",
+        "sslTargetOverrideUrlSubstitutionExp": "ca.org1.revokechain.br",
+        "urlSubstitutionExp": "172.22.154.251:7779"
       }
     ]
   }
